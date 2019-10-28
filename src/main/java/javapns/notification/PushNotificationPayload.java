@@ -20,7 +20,8 @@ public class PushNotificationPayload extends Payload {
   static final Logger logger = LoggerFactory.getLogger(PushNotificationPayload.class);
 
   /* Maximum total length (serialized) of a payload */
-  private static final int MAXIMUM_PAYLOAD_LENGTH = 256;
+  /* Increasing this to 4000 per updated iOS specs*/
+  private static final int MAXIMUM_PAYLOAD_LENGTH = 4000;
   public static final String ALERT = "alert";
 
   /* The application Dictionary */
