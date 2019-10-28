@@ -77,9 +77,12 @@ public class BasicDevice implements Device {
       throw new InvalidDeviceTokenFormatException("Device Token is null, and not the required 64 bytes...");
     }
 
+    // Remove this check for token length as it is now variable and could grow
+    /*
     if (token.getBytes().length != 64) {
       throw new InvalidDeviceTokenFormatException("Device Token has a length of [" + token.getBytes().length + "] and not the required 64 bytes!");
     }
+    */
   }
 
   public void validateTokenFormat() throws InvalidDeviceTokenFormatException {
